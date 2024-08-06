@@ -16,7 +16,7 @@ export default function LoginPage() {
     try {
       const response = await axios.post('http://localhost:8085/api/api-token-auth/', { username, password });
       localStorage.setItem('token', response.data.token);
-      router.push('/'); // 로그인 후 음악 리스트 페이지로 이동
+      router.push('/'); 
     } catch (error) {
       setMessage('There was an error logging in! Please check your credentials and try again.');
       console.error('There was an error logging in!', error);
