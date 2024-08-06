@@ -1,22 +1,25 @@
-import Link from 'next/link';
+"use client";
+
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
+  const router = useRouter();
+
+  const navigateTo = (path: string) => {
+    router.push(path);
+  };
+
   return (
     <div>
-        <li>
-          <Link href="/">hello</Link>
-        </li>
       <h1>Home</h1>
-      <h2>hi</h2>
       <ul>
         <li>
-          <Link href="/login">Login</Link>
+          <button onClick={() => navigateTo('/login')}>Login</button>
         </li>
         <li>
-          <Link href="/music">Music List</Link>
+          <button onClick={() => navigateTo('/mymusic')}>Music List</button>
         </li>
       </ul>
     </div>
   );
 }
-

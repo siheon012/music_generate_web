@@ -1,10 +1,11 @@
 "use client";
 import { useState } from 'react';
 import axios from 'axios';
-import { useRouter } from 'next/navigation';  // next/navigation 사용
+import { useRouter } from 'next/navigation';  
 import Link from 'next/link';
+import React from 'react';
 
-export default function Login() {
+export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
