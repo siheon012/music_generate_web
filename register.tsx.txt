@@ -1,0 +1,42 @@
+import { useState } from 'react';
+import Layout from '../components/Layout';
+
+export default function Register() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle registration logic here
+  };
+
+// ... imports and component logic
+
+return (
+  <Layout>
+    <div className="form-container">
+      <h1 className="text-3xl font-bold mb-4">Login</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+          className="form-input"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          className="form-input"
+        />
+        <button type="submit" className="form-button">
+          Login
+        </button>
+      </form>
+    </div>
+  </Layout>
+);
+}

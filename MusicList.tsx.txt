@@ -1,0 +1,28 @@
+import React from 'react';
+
+interface Song {
+  id: number;
+  title: string;
+  artist: string;
+}
+
+interface MusicListProps {
+  songs: Song[];
+}
+
+const MusicList: React.FC<MusicListProps> = ({ songs }) => {
+  return (
+    <div className="music-list">
+      <h2 className="text-xl font-bold mb-4">Your Music</h2>
+      <ul>
+        {songs.map((song) => (
+          <li key={song.id} className="music-item">
+            <span className="font-semibold">{song.title}</span> - {song.artist}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default MusicList;
