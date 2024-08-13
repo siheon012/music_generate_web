@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    'accounts',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'django_extensions',
 
 ]
 
@@ -113,7 +114,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'myapp.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

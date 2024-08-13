@@ -1,10 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
-class Music(models.Model):
-    title = models.CharField(max_length=100)
-    file = models.FileField(upload_to='music/')
-    created_at = models.DateTimeField(auto_now_add=True)
 
 class UserManager(BaseUserManager):
     def create_user(self, email, username, phone_number, password=None):
@@ -60,3 +56,12 @@ class User(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
+
+class Music(models.Model):
+    title = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    file = models.FileField(upload_to='music/')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='music_list')
+
+    def __str__(self):
+        return self.title
