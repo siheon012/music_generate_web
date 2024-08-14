@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+class ChatViewSet(viewsets.ModelViewSet):
+    queryset = Chat.objects.all()
+    serializer_class = ChatSerializer
