@@ -70,6 +70,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    #추가
+    'core.middleware.TimezoneMiddleware',  
+    'core.middleware.LogRequestMiddleware', 
 ]
 
 CORS_ALLOWED_ORIGINS = [

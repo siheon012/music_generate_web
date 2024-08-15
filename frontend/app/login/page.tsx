@@ -38,11 +38,6 @@ export default function LoginPage() {
         <br />
         <button type="submit">Login</button>
         <button type="button" onClick={() => router.push('/register')}>회원가입</button>
-        <ul>
-          <li>
-            <Link href="/register">Register</Link>
-          </li>
-        </ul>
         {message && <p>{message}</p>}
       </form>
     </div>

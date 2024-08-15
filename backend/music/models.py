@@ -9,6 +9,8 @@ class Music(models.Model):
     duration = models.DurationField(null=True, blank=True)  # 음악의 길이
     genre = models.CharField(max_length=100, null=True, blank=True)  # 음악의 장르
     description = models.TextField(null=True, blank=True)  # 음악에 대한 설명
+    audio_format = models.CharField(max_length=10, null=True, blank=True)  # 파일 포맷 (예: MP3, WAV)
+
 
     def __str__(self):
         return f"{self.title} by {self.user.username}"
