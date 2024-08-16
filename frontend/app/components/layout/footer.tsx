@@ -1,7 +1,10 @@
+"use client";  
+
+
 import React from 'react';
 import ScrollToTopButton from './totopbutton';
 
-const Footer = ({ ratio1, ratio2, ratio3 }) => {
+const Footer = () => {
   return (
     <footer
       style={{
@@ -15,7 +18,7 @@ const Footer = ({ ratio1, ratio2, ratio3 }) => {
     >
       <div style={{ flex: 1, lineHeight: '1.5', alignSelf: 'stretch' , padding: '0 500px'}}>
         <div>
-          <h1 style={{ fontSize: '100%' }}>Eon Website</h1>
+          <h1 style={{ fontSize: '100%' }}>Music Generater Web</h1>
           <div style={{ height: '10px' }}></div>
           <p style={{ fontSize: '75%' }}>수원캠퍼스 | (16227) 경기도 수원시 영통구 광교산로 154-42</p>
           <p style={{ fontSize: '70%' }}>031-249-9114</p>
