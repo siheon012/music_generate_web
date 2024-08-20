@@ -7,7 +7,8 @@ const ScrollToTopButton = () => {
 
   // Scroll 이벤트 감지하여 버튼의 표시 여부 결정
   const handleScroll = () => {
-    if (!isScrolling && window.scrollY >= 200) { // 스크롤 중이 아니고 스크롤이 200px 이상인 경우에만 버튼 표시
+    if (!isScrolling && window.scrollY >= 200) {
+      // 스크롤 중이 아니고 스크롤이 200px 이상인 경우에만 버튼 표시
       setIsVisible(true);
     } else {
       setIsVisible(false);

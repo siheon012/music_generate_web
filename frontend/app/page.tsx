@@ -11,15 +11,7 @@ export default function Page() {
 
   return (
     <div>
-      <h1>Home</h1>
-      <ul>
-        <li>
-          <button onClick={() => navigateTo('/login')}>Login</button>
-        </li>
-        <li>
-          <button onClick={() => navigateTo('/mymusic')}>Music List</button>
-        </li>
-      </ul>
+      <ul></ul>
     </div>
   );
 }
